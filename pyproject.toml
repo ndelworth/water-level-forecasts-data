@@ -1,5 +1,5 @@
 [project]
-name = "wlf-scorecard"
+name = "water-level-forecasts-data"
 version = "0.1.0"
 description = "Hourly lead-time-tagged accuracy tracking for CHS's PDU water level forecast vs. our own model."
 readme = "README.md"
