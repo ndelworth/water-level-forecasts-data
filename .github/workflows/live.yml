@@ -1,0 +1,44 @@
+name: live
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # hourly, on the hour
+  workflow_dispatch: {}    # allows manual "Run workflow" from the Actions tab
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          python-version: "3.11"
+
+      - run: uv sync
+
+      - name: Poll wlf snapshot
+        run: uv run python poll_wlf_snapshot.py
+
+      - name: Commit snapshot data
+        run: |
+          git config user.name "wlf-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/*.csv
+          git diff --cached --quiet && echo "nothing to commit" || git commit -m "data: hourly update $(date -u +%FT%H:%MZ)"
+          git push
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - uses: actions/deploy-pages@v4
