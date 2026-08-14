@@ -23,11 +23,13 @@ jobs:
         run: uv run python poll_wlo_actuals.py
       - name: Poll wlp snapshot
         run: uv run python poll_wlp_snapshot.py
+      - name: Publish chunked db for GitHub Pages
+        run: uv run python publish_chunks.py
       - name: Commit snapshot data
         run: |
           git config user.name "wlf-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/tides.db
+          git add docs/tides.db docs/tides_chunks
           git diff --cached --quiet && echo "nothing to commit" || git commit -m "data: hourly update $(date -u +%FT%H:%MZ)"
           git pull --rebase origin main
           git push
