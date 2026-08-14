@@ -1,0 +1,115 @@
+{
+  "generated_at": "2026-07-14T04:15:15.268186+00:00",
+  "bucket_order": [
+    "0-1h",
+    "1-2h",
+    "2-3h",
+    "3-6h",
+    "6-12h",
+    "12-18h",
+    "18-24h",
+    "24-30h",
+    "30-36h",
+    "36-42h",
+    "42-48h",
+    "48-54h"
+  ],
+  "rows": [
+    {
+      "series": "wlp (tide-only baseline)",
+      "lead_bucket": "0-1h",
+      "mae": 8.22,
+      "rmse": 8.89,
+      "bias": -2.3,
+      "n": 73.0
+    },
+    {
+      "series": "wlp (tide-only baseline)",
+      "lead_bucket": "1-2h",
+      "mae": 8.22,
+      "rmse": 8.89,
+      "bias": -2.3,
+      "n": 73.0
+    },
+    {
+      "series": "wlp (tide-only baseline)",
+      "lead_bucket": "2-3h",
+      "mae": 8.22,
+      "rmse": 8.89,
+      "bias": -2.3,
+      "n": 73.0
+    },
+    {
+      "series": "wlp (tide-only baseline)",
+      "lead_bucket": "3-6h",
+      "mae": 8.22,
+      "rmse": 8.89,
+      "bias": -2.3,
+      "n": 73.0
+    },
+    {
+      "series": "wlp (tide-only baseline)",
+      "lead_bucket": "6-12h",
+      "mae": 8.22,
+      "rmse": 8.89,
+      "bias": -2.3,
+      "n": 73.0
+    },
+    {
+      "series": "wlp (tide-only baseline)",
+      "lead_bucket": "12-18h",
+      "mae": 8.22,
+      "rmse": 8.89,
+      "bias": -2.3,
+      "n": 73.0
+    },
+    {
+      "series": "wlp (tide-only baseline)",
+      "lead_bucket": "18-24h",
+      "mae": 8.22,
+      "rmse": 8.89,
+      "bias": -2.3,
+      "n": 73.0
+    },
+    {
+      "series": "wlp (tide-only baseline)",
+      "lead_bucket": "24-30h",
+      "mae": 8.22,
+      "rmse": 8.89,
+      "bias": -2.3,
+      "n": 73.0
+    },
+    {
+      "series": "wlp (tide-only baseline)",
+      "lead_bucket": "30-36h",
+      "mae": 8.22,
+      "rmse": 8.89,
+      "bias": -2.3,
+      "n": 73.0
+    },
+    {
+      "series": "wlp (tide-only baseline)",
+      "lead_bucket": "36-42h",
+      "mae": 8.22,
+      "rmse": 8.89,
+      "bias": -2.3,
+      "n": 73.0
+    },
+    {
+      "series": "wlp (tide-only baseline)",
+      "lead_bucket": "42-48h",
+      "mae": 8.22,
+      "rmse": 8.89,
+      "bias": -2.3,
+      "n": 73.0
+    },
+    {
+      "series": "wlp (tide-only baseline)",
+      "lead_bucket": "48-54h",
+      "mae": 8.22,
+      "rmse": 8.89,
+      "bias": -2.3,
+      "n": 73.0
+    }
+  ]
+}

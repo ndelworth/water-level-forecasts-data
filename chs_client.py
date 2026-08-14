@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 PDU_STATION_ID = "64b6e5ec8027cb190816a0c0"
 BASE_URL = f"https://api-iwls.dfo-mpo.gc.ca/api/v1/stations/{PDU_STATION_ID}/data"
 
-DB_PATH = "data/tides.db"
+DB_PATH = "docs/tides.db"
 
 SCHEMA = {
     "wlo": ("time TEXT PRIMARY KEY, wlo REAL", ["time"]),
