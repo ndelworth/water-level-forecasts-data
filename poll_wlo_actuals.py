@@ -28,6 +28,17 @@ def main():
 
     print(f"  Pulled {len(df)} hourly rows this run. wlo table now has {total:,} total rows.")
 
+    try:
+        raw = fetch_series("wlo", start, now, resolution="SIXTY_MINUTES")
+    except Exception as e:
+        print(f"  Top-of-hour wlo FAILED: {e}")
+        sys.exit(0)
+    top = resample_series(raw, "time", "wlo", "1h")
+    if not top.empty:
+        upsert_df(conn, "wlo_top", top, time_cols=["time"])
+        print(f"  Pulled {len(top)} top-of-hour rows. wlo_top table now has "
+              f"{conn.execute('SELECT COUNT(*) FROM wlo_top').fetchone()[0]:,} total rows.")
+
 
 if __name__ == "__main__":
     main()

@@ -14,6 +14,9 @@ SCHEMA = {
     "wlp": ("time TEXT PRIMARY KEY, wlp REAL", ["time"]),
     "wlf": ("poll_time TEXT, valid_time TEXT, lead_hours REAL, wlf REAL, "
             "PRIMARY KEY (poll_time, valid_time)", ["valid_time"]),
+    "wlo_top": ("time TEXT PRIMARY KEY, wlo REAL", ["time"]),
+    "own": ("poll_time TEXT, valid_time TEXT, lead_hours REAL, own REAL, weather_run TEXT, "
+            "PRIMARY KEY (poll_time, valid_time)", ["valid_time"]),
 }
 
 
