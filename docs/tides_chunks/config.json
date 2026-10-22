@@ -1,7 +1,7 @@
 {
   "serverMode": "chunked",
   "requestChunkSize": 4096,
-  "databaseLengthBytes": 19304448,
+  "databaseLengthBytes": 19320832,
   "serverChunkSize": 10485760,
   "urlPrefix": "https://ndelworth.github.io/water-level-forecasts-data/tides_chunks/tides.sqlite3.",
   "suffixLength": 3
